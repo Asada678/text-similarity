@@ -15,6 +15,7 @@ const SignInButton: FC<SignInButtonProps> = ({}) => {
     try {
       await signIn("google");
     } catch (error) {
+      console.log("error:", error);
       toast({
         title: "Error signing in",
         message: "Please try again later",
