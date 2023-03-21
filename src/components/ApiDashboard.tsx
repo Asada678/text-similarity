@@ -43,7 +43,10 @@ const ApiDashboard = async () => {
           readOnly
           value={activeApiKey.key}
         />
-        <ApiKeyOptions />
+        <ApiKeyOptions
+          apiKeyId={activeApiKey.id}
+          apiKeyKey={activeApiKey.key}
+        />
       </div>
       <Paragraph className="text-center md:text-left mt-4 -mb-4">Your API history:</Paragraph>
       <Table userRequests={serializableRequests} />
